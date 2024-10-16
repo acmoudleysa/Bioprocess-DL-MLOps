@@ -1,0 +1,1 @@
+- [Different types of differentation](https://huggingface.co/blog/andmholm/what-is-automatic-differentiation): Talks about different types of differentiation and dives deep into backward and forward AD with its implementation in Python.
