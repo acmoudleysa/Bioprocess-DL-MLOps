@@ -14,6 +14,7 @@ In this repository, I aim to develop predictive models for bioprocesses while in
 - **Gaussian Processes (GPs)**
 - **Long Short-Term Memory networks (LSTMs)**
 - **Recurrent Neural Networks (RNNs)**
+- **Others**
 
 ### MLOps Tools
 - **Logging**: For tracking experiments and model performance.
