@@ -2,3 +2,4 @@
 - [Really nice example of why use Taylor Series in ML/DL models](https://ainxt.co.in/importance-of-taylor-series-in-deep-learning-machine-learning-models/). It will be an easy read if you are already familiar with limit definition of partial derivatives, Linear Approximation (a special case of Taylor Series), Gradients, and Directional derivatives.
 - [Quick refresher on Probabilities](https://blog.dailydoseofds.com/p/a-visual-guide-to-joint-marginal)
 - [Nice resource for Expectations of r.v and functions](https://www.stat.auckland.ac.nz/~fewster/325/notes/ch3.pdf): This resource is a goldmine. Very intuitive explanations along with robust examples.
+- [Reference for more theoretical statistics and probability theory](https://www.probabilitycourse.com/chapter5/5_3_2_bivariate_normal_dist.php): Very dense and heavy in theory
