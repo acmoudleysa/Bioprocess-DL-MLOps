@@ -31,4 +31,5 @@ In this repository, I aim to develop predictive models for bioprocesses while in
 differentiable wonderland](https://arxiv.org/abs/2404.17625) (This is condensed resource so need to make sure your basics are clear. I will start with the 'Dive into Deep Learning' and then go through this book to make sure I am not missing anything)
 - For Maths (I have forgotten most of them so need some refresher): [Mathematics for Machine Learning](https://mml-book.github.io/book/mml-book.pdf) (I usually revise my concepts each time I come across maths that I can't decipher. This book can serve as a reference. I generally use other web resources tbh, but its to good to have a reference resource.)
 - For ML: [PRML](https://www.youtube.com/@sinatootoonian9129)
+  
 I will have a notebook folder to keep all the notes of the things I have studied. I am following the first book (top-bottom approach). 
