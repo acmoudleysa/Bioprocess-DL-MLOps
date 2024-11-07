@@ -33,3 +33,9 @@ differentiable wonderland](https://arxiv.org/abs/2404.17625) (This is condensed 
 - For ML: [PRML](https://www.youtube.com/@sinatootoonian9129)
   
 I will have a notebook folder to keep all the notes of the things I have studied. I am following the first book (top-bottom approach). 
+
+
+## MLOps Workflow
+During development, I use DVC and MLflow to manage and track data and model versions. DVC ensures reproducibility by versioning datasets and models, while MLflow tracks experiments, logs metrics, and manages model versions. Once experiments are complete and models are ready, I push all changes to GitHub.
+
+GitHub Actions then automates the CI/CD process, testing, building, and deploying Docker containers for both Airflow DAGs (handling retraining) and the prediction web app. The containers are hosted to simulate a production environment. Since I don’t have a cloud storage membership, Google Drive serves as a free storage solution where Airflow uploads the trained models. This allows the web app to access and load the latest models regularly.
