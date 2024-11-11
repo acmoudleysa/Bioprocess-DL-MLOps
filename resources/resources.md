@@ -6,4 +6,5 @@
 - [Resources for MLflow](https://levelup.gitconnected.com/mlflow-made-easy-your-beginners-guide-bf63f8fed915)
 - [Resources for MLflow](https://dzone.com/articles/from-novice-to-advanced-in-mlflow-a-comprehensive)
 - [Resources for MLflow](https://github.com/amesar/mlflow-examples/tree/master)
+- [Resource for DVC](https://dvc.org/doc/use-cases/versioning-data-and-models/tutorial)
 - [Univariate statistics](https://www.jbstatistics.com/)
