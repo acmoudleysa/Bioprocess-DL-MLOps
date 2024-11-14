@@ -1,0 +1,25 @@
+# Root directory for all outputs
+artifacts_root: artifacts
+
+# Data file paths
+data_paths:
+  raw_data: "data/raw.csv"
+  train_data: "artifacts/train.csv"
+  test_data: "artifacts/test.csv"
+
+# Preprocessing configuration
+preprocessing_object:
+  preprocesser_path: artifacts/preprocesser.skops
+
+# Train-test split parameters  
+split:
+  test_size: 0.2
+  random_state: 123
+
+# Model type specification
+ML_MODEL:
+  type: "classification"
+
+# Model artifact path
+model_object:
+  trained_model_path: artifacts/model.skops

@@ -4,6 +4,7 @@ from datetime import datetime
 import os
 from dotenv import find_dotenv, load_dotenv
 from pathlib import Path
+from bioprocess_mlops.config.config import ConfigurationManager
 
 
 env_file = find_dotenv()
@@ -31,4 +32,4 @@ def setup_logging():
 if __name__ == "__main__":
     setup_logging()
     logger = logging.getLogger(__name__)
-    logger.info("Starting the pipeline")
+    configuration = ConfigurationManager()

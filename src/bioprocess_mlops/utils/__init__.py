@@ -1,5 +1,6 @@
-from .utils import CustomFormatter
+from .utils import CustomFormatter, load_yaml
 
 __all__ = [
-    "CustomFormatter"
+    "CustomFormatter",
+    "load_yaml"
 ]

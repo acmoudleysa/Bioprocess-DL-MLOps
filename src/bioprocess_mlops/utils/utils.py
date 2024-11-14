@@ -1,4 +1,8 @@
 import logging
+from typing import Any, Dict
+import yaml  # type: ignore
+
+logger = logging.getLogger(__name__)
 
 
 class CustomFormatter(logging.Formatter):
@@ -29,3 +33,14 @@ class CustomFormatter(logging.Formatter):
         log_fmt = self.FORMATS.get(record.levelno)
         formatter = logging.Formatter(log_fmt)
         return formatter.format(record)
+
+
+def load_yaml(filepath: str) -> Dict[str, Any]:
+    try:
+        with open(filepath) as file:
+            data = yaml.safe_load(file)
+            logger.info(f"{filepath.name} loaded.")
+            return data
+    except Exception:
+        logger.error(f"Error loading {filepath}")
+        raise

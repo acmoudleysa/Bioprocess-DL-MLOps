@@ -7,6 +7,8 @@ list_of_files = [
     "config/logging.prod.ini",
     "config/config.yaml",
     "logs/",
+    "data/",
+    "artifacts/",
     "airflow/dags/training_pipeline.py",
     f"src/{project_name}/__init__.py",
     f"src/{project_name}/main.py",
@@ -35,13 +37,18 @@ list_of_files = [
     ".flake8"
 ]
 
-for filepath in list_of_files:
-    filepath = Path(filepath)
+for filepath_str in list_of_files:
+    filepath = Path(filepath_str)
     filedir = filepath.parent
 
+    # Create the directory if it is not the root directory
     if filedir != Path("."):
-        filedir.mkdir(parents=True,
-                      exist_ok=True)
+        filedir.mkdir(parents=True, exist_ok=True)
 
-    if (not filepath.exists()) or (filepath.stat().st_size == 0):
-        filepath.touch()
+    # Check if the path is a directory and create it
+    if filepath_str.endswith("/"):
+        filepath.mkdir(parents=True, exist_ok=True)
+    else:
+        # Create the file if it doesn't exist or is empty
+        if (not filepath.exists()) or (filepath.stat().st_size == 0):
+            filepath.touch()

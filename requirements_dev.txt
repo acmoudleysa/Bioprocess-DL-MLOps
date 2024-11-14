@@ -5,3 +5,4 @@ numpy
 mlflow
 dvc
 flake8
+skops
