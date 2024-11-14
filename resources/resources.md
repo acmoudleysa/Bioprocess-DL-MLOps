@@ -8,3 +8,4 @@
 - [Resources for MLflow](https://github.com/amesar/mlflow-examples/tree/master)
 - [Resource for DVC](https://dvc.org/doc/use-cases/versioning-data-and-models/tutorial)
 - [Univariate statistics](https://www.jbstatistics.com/)
+- [How does Pickle work](https://rushter.com/blog/pickle-serialization-internals/)
