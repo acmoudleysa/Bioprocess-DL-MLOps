@@ -6,6 +6,7 @@ list_of_files = [
     "config/logging.dev.ini",
     "config/logging.prod.ini",
     "config/config.yaml",
+    "config/secrets.yaml",  # Although not recommended to use secrets.yaml
     "logs/",
     "data/",
     "artifacts/",

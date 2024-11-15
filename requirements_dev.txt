@@ -6,3 +6,4 @@ mlflow
 dvc
 flake8
 skops
+polars

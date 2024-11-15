@@ -16,9 +16,27 @@ class DataConfig:
 
 
 @dataclass(frozen=True)
+class TrainTestSplitConfig:
+    test_size: float
+    random_seed: int
+
+
+@dataclass(frozen=True)
 class ModelConfig:
     type: str
-    trained_model_path: str
+    trained_model_path: str    
+
+
+@dataclass
+class MLflowConfig:
+    experiment_name: str
+    run_name: str
+    active_status: bool
+
+
+@dataclass
+class PreprocessingConfig:
+    steps: Dict[str, Dict[str, Any]]
     preprocesser_path: str
 
 
@@ -37,18 +55,37 @@ class ConfigurationManager:
             test_data_path=data_config["test_data"]
         )
 
-    def get_model_config(self) -> ModelConfig:
-        return ModelConfig(
-            type=self.config["ML_MODEL"]["type"],
-            trained_model_path=self.config["model_object"]
-            ["trained_model_path"],
-            preprocesser_path=self.config["preprocessing_object"]
-            ["preprocesser_path"]
+    def get_mlflow_config(self) -> MLflowConfig:
+        """Get MLflow related configurations"""
+        mlflow_config = self.config["mlflow"]
+        return MLflowConfig(
+            experiment_name=mlflow_config["experiment_name"],
+            run_name=mlflow_config["run_name"],
+            active_status=mlflow_config["active"]
         )
 
-    def get_split_config(self) -> Dict[str, Any]:
+    def get_model_config(self) -> ModelConfig:
+        model_config = self.config["model"]
+        return ModelConfig(
+            type=model_config["type"],
+            trained_model_path=model_config['artifact']
+            ["trained_model_path"]
+        )
+
+    def get_split_config(self) -> TrainTestSplitConfig:
         """Get train-test split parameters"""
-        return self.config["split"]
+        return TrainTestSplitConfig(
+            test_size=self.config['split']['test_size'],
+            random_seed=self.config['split']['random_state']
+        )
+
+    def get_preprocessing_config(self) -> PreprocessingConfig:
+        pp_config = self.config['preprocessing']
+        return PreprocessingConfig(
+            steps=pp_config['methods'],
+            preprocesser_path=pp_config['artifact']
+            ['preprocessor_path']
+        )
 
     def get_model_params(self):
         raise NotImplementedError("Not implemented yet. Come back later")
@@ -56,4 +93,4 @@ class ConfigurationManager:
 
 if __name__ == "__main__":
     configuration = ConfigurationManager()
-    print(configuration.config)
+    print(configuration.get_mlflow_config().active_status)

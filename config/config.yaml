@@ -1,25 +1,41 @@
-# Root directory for all outputs
+# Base paths
 artifacts_root: artifacts
 
-# Data file paths
+# Data configurations
 data_paths:
   raw_data: "data/raw.csv"
   train_data: "artifacts/train.csv"
   test_data: "artifacts/test.csv"
 
-# Preprocessing configuration
-preprocessing_object:
-  preprocesser_path: artifacts/preprocesser.skops
-
-# Train-test split parameters  
 split:
   test_size: 0.2
   random_state: 123
 
-# Model type specification
-ML_MODEL:
+# Model configurations
+model:
   type: "classification"
+  artifact:
+    trained_model_path: "artifacts/model.skops"
 
-# Model artifact path
-model_object:
-  trained_model_path: artifacts/model.skops
+# Preprocessing configurations
+preprocessing:
+  methods:
+    sg_smooth:
+      enabled: false
+      params:
+        window_length: 15
+        polyorder: 2
+        deriv: 0
+    snv:
+      enabled: false
+    standard_scaler:
+      enabled: true
+
+  artifact:
+    preprocessor_path: "artifacts/preprocesser.skops"
+
+# MLflow tracking configurations
+mlflow:
+  experiment_name: "my_experiment"
+  run_name: "default_run"
+  active: true

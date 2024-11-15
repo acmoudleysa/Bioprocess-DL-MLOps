@@ -44,3 +44,11 @@ def load_yaml(filepath: str) -> Dict[str, Any]:
     except Exception:
         logger.error(f"Error loading {filepath}")
         raise
+
+
+class SavitzkyGolayFilter:
+    ...
+
+
+class SNV:
+    ...
