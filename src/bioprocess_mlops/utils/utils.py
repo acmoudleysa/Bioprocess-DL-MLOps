@@ -1,6 +1,18 @@
 import logging
 from typing import Any, Dict
 import yaml  # type: ignore
+from dataclasses import dataclass, field
+from numpy.typing import NDArray
+from sklearn.metrics import (
+    mean_absolute_error,
+    root_mean_squared_error,
+    accuracy_score,
+    precision_score,
+    roc_auc_score,
+    r2_score,
+    recall_score
+)
+from typing import Literal
 
 logger = logging.getLogger(__name__)
 
@@ -52,3 +64,41 @@ class SavitzkyGolayFilter:
 
 class SNV:
     ...
+
+
+@dataclass
+class Metrics:
+    metric_type: Literal["classification", "regression"]
+    y_true: NDArray
+    y_pred: NDArray
+    results: dict = field(init=False)
+
+    def __post_init__(self):
+        logger.info(f"Calculating {self.metric_type} metrics.")
+        self.results = (self.classification()
+                        if self.metric_type == "classification"
+                        else self.regression())
+
+    def classification(self):
+        return {
+            'accuracy': accuracy_score(self.y_true,
+                                       self.y_pred),
+            'recall': recall_score(self.y_true,
+                                   self.y_pred,
+                                   average='binary'),
+            'precision': precision_score(self.y_true,
+                                         self.y_pred,
+                                         average='binary'),
+            'roc_auc': roc_auc_score(self.y_true,
+                                     self.y_pred)
+        }
+
+    def regression(self):
+        return {
+            'rmse': root_mean_squared_error(self.y_true,
+                                            self.y_pred),
+            'mae': mean_absolute_error(self.y_true,
+                                       self.y_pred),
+            'r2': r2_score(self.y_true,
+                           self.y_pred)
+        }

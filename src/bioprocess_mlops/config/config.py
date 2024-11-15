@@ -1,7 +1,8 @@
 from dataclasses import dataclass
 from bioprocess_mlops.utils import load_yaml
 from bioprocess_mlops.constants import (CONFIG_FILE_PATH,
-                                        PARAMS_FILE_PATH)
+                                        PARAMS_FILE_PATH,
+                                        SECRETS_FILE_PATH)
 import logging
 from typing import Any, Dict
 
@@ -29,23 +30,27 @@ class ModelConfig:
 
 @dataclass
 class MLflowConfig:
+    active_status: bool
     experiment_name: str
     run_name: str
-    active_status: bool
+    uri: str
 
 
 @dataclass
 class PreprocessingConfig:
     steps: Dict[str, Dict[str, Any]]
-    preprocesser_path: str
+    pp_template_path: str
+    pp_fitted_path: str
 
 
 class ConfigurationManager:
     def __init__(self,
                  config_path: str = CONFIG_FILE_PATH,
-                 params_path: str = PARAMS_FILE_PATH):
+                 params_path: str = PARAMS_FILE_PATH,
+                 secrets_path: str = SECRETS_FILE_PATH):
         self.config = load_yaml(config_path)
         self.params = load_yaml(params_path)
+        self.secrets_path = load_yaml(secrets_path)
 
     def get_data_config(self) -> DataConfig:
         data_config = self.config["data_paths"]
@@ -61,7 +66,8 @@ class ConfigurationManager:
         return MLflowConfig(
             experiment_name=mlflow_config["experiment_name"],
             run_name=mlflow_config["run_name"],
-            active_status=mlflow_config["active"]
+            active_status=mlflow_config["active"],
+            uri=self.secrets_path['mlflow_uri']
         )
 
     def get_model_config(self) -> ModelConfig:
@@ -83,8 +89,10 @@ class ConfigurationManager:
         pp_config = self.config['preprocessing']
         return PreprocessingConfig(
             steps=pp_config['methods'],
-            preprocesser_path=pp_config['artifact']
-            ['preprocessor_path']
+            pp_template_path=pp_config['artifact']
+            ['preprocesser_template_path'],
+            pp_fitted_path=pp_config['artifact']
+            ['fitted_preprocessor_path']
         )
 
     def get_model_params(self):

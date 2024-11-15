@@ -7,7 +7,8 @@ from pathlib import Path
 from bioprocess_mlops.config.config import ConfigurationManager
 from bioprocess_mlops.components import (DataIngestion,
                                          DataTransformation,
-                                         ModelTrainer)
+                                         ModelTrainer,
+                                         ModelEvaluation)
 
 
 env_file = find_dotenv()
@@ -48,4 +49,13 @@ if __name__ == "__main__":
                                configuration.get_data_config(),
                                configuration.get_preprocessing_config())
     model_train.initiate_model_training()
+
+    model_evaluate = ModelEvaluation(
+        configuration.get_model_config(),
+                               configuration.get_data_config(),
+                               configuration.get_preprocessing_config(),
+                               configuration.get_mlflow_config()
+    )
+
+    model_evaluate.initiate_model_evaluation()
 

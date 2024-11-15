@@ -52,16 +52,16 @@ class DataTransformation:
 
     def create_preprocessor_object(self):
         try:
-            preprocessing_obj = self.get_transformer_object()
+            pp_template = self.get_transformer_object()
             logger.info(f"Created preprocessing pipeline with "
-                        f"{len(preprocessing_obj.steps)} steps")
+                        f"{len(pp_template.steps)} steps")
 
             # Save preprocessing object if there are steps
-            preprocessor_path = self.preprocessing_config.preprocesser_path
-            if preprocessing_obj.steps:
-                logger.info(f"Saving preprocessing object at {preprocessor_path}")  # noqa E51
-                sio.dump(preprocessing_obj, preprocessor_path)
+            preprocessor_template_path = self.preprocessing_config.pp_template_path  # noqa E51
+            if pp_template.steps:
+                logger.info(f"Saving preprocessing object at {preprocessor_template_path}")  # noqa E51
+                sio.dump(pp_template, preprocessor_template_path)
 
         except Exception:
-            logger.error("Error in creating preprocessor object")
+            logger.error("Error in creating preprocessor pipeline template")
             raise
