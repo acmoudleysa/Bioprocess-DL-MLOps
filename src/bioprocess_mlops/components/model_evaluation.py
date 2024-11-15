@@ -60,8 +60,6 @@ class ModelEvaluation:
                 self.model_config.trained_model_path
             )
             logger.info("Loaded Pretrained-model.")
-            run_time = datetime.now().strftime("%Y%m%d-%H-%M-%S")
-
             predictions = model.predict(X_test)
             metrics = Metrics(
                         metric_type=self.model_config.type,
@@ -75,6 +73,7 @@ class ModelEvaluation:
                 mlflow.set_experiment(
                     self.mlflow_config.experiment_name
                 )
+                run_time = datetime.now().strftime("%Y%m%d-%H-%M-%S")
                 with mlflow.start_run(run_name=f"{self.mlflow_config.run_name}-"   # noqa E51
                                       f"{run_time}"):
                     for key, val in metrics.items():
@@ -96,8 +95,7 @@ class ModelEvaluation:
                             input_example=input_example
                         )
             else:
-                logger.info("Mlflow inactive.")
-                logger.info(metrics)
+                logger.info(f"Metrics: {metrics}")
 
         except Exception:
             logger.error("Error during model evaluation")

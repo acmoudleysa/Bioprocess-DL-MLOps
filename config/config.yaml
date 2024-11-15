@@ -37,6 +37,6 @@ preprocessing:
 
 # MLflow tracking configurations
 mlflow:
-  active: true
+  active: false
   experiment_name: "my_experiment"
   run_name: "default_run"

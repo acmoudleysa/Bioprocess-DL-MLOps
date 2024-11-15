@@ -19,7 +19,7 @@ list_of_files = [
     f"src/{project_name}/components/model_training.py",
     f"src/{project_name}/components/model_evaluation.py",
     f"src/{project_name}/pipeline/__init__.py",
-    f"src/{project_name}/pipeline/training.py",
+    f"src/{project_name}/pipeline/training_pipeline.py",
     f"src/{project_name}/pipeline/prediction_pipeline.py",
     f"src/{project_name}/utils/utils.py",
     f"src/{project_name}/utils/__init__.py",

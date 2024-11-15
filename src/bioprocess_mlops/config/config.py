@@ -52,6 +52,7 @@ class ConfigurationManager:
         self.params = load_yaml(params_path)
         self.secrets_path = load_yaml(secrets_path)
 
+    @property
     def get_data_config(self) -> DataConfig:
         data_config = self.config["data_paths"]
         return DataConfig(
@@ -60,6 +61,7 @@ class ConfigurationManager:
             test_data_path=data_config["test_data"]
         )
 
+    @property
     def get_mlflow_config(self) -> MLflowConfig:
         """Get MLflow related configurations"""
         mlflow_config = self.config["mlflow"]
@@ -70,6 +72,7 @@ class ConfigurationManager:
             uri=self.secrets_path['mlflow_uri']
         )
 
+    @property
     def get_model_config(self) -> ModelConfig:
         model_config = self.config["model"]
         return ModelConfig(
@@ -78,6 +81,7 @@ class ConfigurationManager:
             ["trained_model_path"]
         )
 
+    @property
     def get_split_config(self) -> TrainTestSplitConfig:
         """Get train-test split parameters"""
         return TrainTestSplitConfig(
@@ -85,6 +89,7 @@ class ConfigurationManager:
             random_seed=self.config['split']['random_state']
         )
 
+    @property
     def get_preprocessing_config(self) -> PreprocessingConfig:
         pp_config = self.config['preprocessing']
         return PreprocessingConfig(
@@ -95,6 +100,7 @@ class ConfigurationManager:
             ['fitted_preprocessor_path']
         )
 
+    @property
     def get_model_params(self):
         raise NotImplementedError("Not implemented yet. Come back later")
 
