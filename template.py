@@ -50,7 +50,5 @@ for filepath_str in list_of_files:
         filedir.mkdir(parents=True, exist_ok=True)
 
     # Check if the path is a directory and create it
-    if filepath_str.endswith("/"):
-        filepath.mkdir(parents=True, exist_ok=True)
-    elif (not filepath.exists()) or (filepath.stat().st_size == 0):
+    if not filepath_str.endswith("/") and (not filepath.exists() or filepath.stat().st_size == 0):
         filepath.touch()
