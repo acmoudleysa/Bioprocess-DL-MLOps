@@ -18,17 +18,10 @@ def setup_logging():
         "prod": "logging.prod.ini"
     }
     config = log_configs.get(os.environ["ENV"], "logging.dev.ini")
-    print(config)
     config_path = Path(CONFIG_DIR) / config
     timestamp = datetime.now().strftime("%Y%m%d-%H-%M-%S")
     logging.config.fileConfig(
         config_path,
         disable_existing_loggers=False,
-        defaults={"logfilename": f"{LOG_DIR}/{timestamp}.log"}
+        defaults={"logfilename": f"{LOG_DIR}/bioprocess_{timestamp}.log"}
     )
-
-
-if __name__ == "__main__":
-    from pathlib import Path
-
-    setup_logging()

@@ -4,7 +4,6 @@ from airflow.operators.python import PythonOperator
 from airflow.operators.empty import EmptyOperator
 from airflow.exceptions import AirflowException
 import logging
-import sys
 from typing import Callable
 
 from bioprocess_mlops.pipeline import TrainingPipeline

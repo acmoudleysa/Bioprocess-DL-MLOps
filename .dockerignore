@@ -1,34 +1,21 @@
-# Byte-compiled Python files
 __pycache__/
-*.py[cod]
-*$py.class
 
-# Virtual environments
-venv/
-.env/
-*.env
+env/
+mlruns/
+resources/
+extra/
 
-# Docker-related files
 Dockerfile
 docker-compose.yml
 *.log
-
-# Local directories or files not needed in the container
-*.sqlite3
-instance/
-media/
-staticfiles/
 tests/
 
-# Build artifacts
 build/
 dist/
 *.egg-info/
 .eggs/
 *.deb
 *.rpm
-
-# Configuration files with sensitive information
-*.pem
-*.key
-*.crt
+.flake8
+dvc.yaml
+.gitignore
