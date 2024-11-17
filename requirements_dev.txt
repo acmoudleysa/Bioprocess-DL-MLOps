@@ -7,3 +7,4 @@ dvc
 flake8
 skops
 polars
+ipykernel
