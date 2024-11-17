@@ -26,15 +26,18 @@ list_of_files = [
     "tests/unit/__init__.py",
     "tests/integration/__init__.py",
     "requirements.txt",
+    "start.sh",
     "requirements_dev.txt",
     ".env",
     "setup.cfg",
     "pyproject.toml",
+    "Dockerfile.airflow",
     "tox.ini",
     "experiment/experiments.ipynb",
     "dvc.yaml",
     "params.yaml",
     "docker-compose.yaml",
+    "docker.ignore",
     ".flake8"
 ]
 
@@ -49,7 +52,5 @@ for filepath_str in list_of_files:
     # Check if the path is a directory and create it
     if filepath_str.endswith("/"):
         filepath.mkdir(parents=True, exist_ok=True)
-    else:
-        # Create the file if it doesn't exist or is empty
-        if (not filepath.exists()) or (filepath.stat().st_size == 0):
-            filepath.touch()
+    elif (not filepath.exists()) or (filepath.stat().st_size == 0):
+        filepath.touch()

@@ -1,0 +1,9 @@
+services:
+  airflow:
+    build:
+      context: ./
+      dockerfile: Dockerfile.airflow
+    image: airflowimage
+    container_name: Bioprocess-airflow
+    ports:
+      - "8080:8080"
