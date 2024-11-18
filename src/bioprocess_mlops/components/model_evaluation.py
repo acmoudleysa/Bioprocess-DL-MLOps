@@ -10,6 +10,7 @@ from numpy.typing import NDArray
 import mlflow
 from bioprocess_mlops.utils import Metrics
 from datetime import datetime
+from bioprocess_mlops.constants import TRUSTED_SKOPS_OBJ
 
 logger = logging.getLogger(__name__)
 
@@ -40,9 +41,11 @@ class ModelEvaluation:
             logger.info("Preprocessing test data")
             pp_obj = sio.load(
                 self.preprocessing_config.artifacts_path[
-                    'fitted_preprocessor_path']
+                    'fitted_preprocessor_path'],
+                trusted=TRUSTED_SKOPS_OBJ
             )
-            input_feature_test_arr = pp_obj.transform(input_feature_test_df)  # noqa E51
+
+            input_feature_test_arr = pp_obj.transform(input_feature_test_df.to_numpy())  # noqa E51
             test_arr = np.c_[input_feature_test_arr,
                              target_feature_test_df.to_numpy()]
             return test_arr
@@ -101,3 +104,15 @@ class ModelEvaluation:
         except Exception:
             logger.error("Error during model evaluation")
             raise
+
+
+if __name__ == "__main__":
+    from bioprocess_mlops.config import ConfigurationManager
+    cfm = ConfigurationManager()
+    me = ModelEvaluation(
+        cfm.get_model_config,
+        cfm.get_data_config,
+        cfm.get_preprocessing_config,
+        cfm.get_mlflow_config
+    )
+    me.preprocess_test_data()

@@ -27,11 +27,11 @@ preprocessing:
         polyorder: 2
         deriv: 0
     snv:
-      enabled: false
+      enabled: true
     standard_scaler:
-      enabled: false
+      enabled: true
 
-  order: []
+  order: [snv, standard_scaler]
 
   artifact:
     preprocesser_template_path: "artifacts/preprocesser_template.skops"

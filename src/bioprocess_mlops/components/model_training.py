@@ -6,6 +6,7 @@ from bioprocess_mlops.config.config import (ModelConfig,
                                             DataConfig,
                                             PreprocessingConfig)
 import numpy as np
+from bioprocess_mlops.constants import TRUSTED_SKOPS_OBJ
 
 logger = logging.getLogger(__name__)
 
@@ -31,13 +32,14 @@ class ModelTrainer:
 
             preprocessing_obj = sio.load(
                 self.preprocessing_config.artifacts_path[
-                    'preprocesser_template_path']
+                    'preprocesser_template_path'],
+                trusted=TRUSTED_SKOPS_OBJ
             )
 
             logging.debug(preprocessing_obj.steps)
 
             logger.info("Fitting the preprocessing pipeline")
-            input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)  # noqa E51
+            input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df.to_numpy())  # noqa E51
             sio.dump(preprocessing_obj,
                      self.preprocessing_config.artifacts_path[
                          'fitted_preprocessor_path'
@@ -69,3 +71,14 @@ class ModelTrainer:
         except Exception:
             logger.error("Error during model training")
             raise
+
+
+if __name__ == "__main__":
+    from bioprocess_mlops.config import ConfigurationManager
+    cfm = ConfigurationManager()
+    me = ModelTrainer(
+        cfm.get_model_config,
+        cfm.get_data_config,
+        cfm.get_preprocessing_config
+    )
+    me.initiate_preprocessing()

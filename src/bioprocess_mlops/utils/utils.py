@@ -63,9 +63,18 @@ class SavitzkyGolayFilter:
     ...
 
 
-class SNV:
-    ...
+class SNV(BaseEstimator, TransformerMixin):
+    def __init__(self):
+        pass
 
+    def fit(self, X, y=None):
+        pass
+
+    def transform(self, X, y=None):
+        return X
+
+    def fit_transform(self, X, y=None):
+        return X
 
 @dataclass
 class Metrics:
