@@ -1,5 +1,5 @@
 import logging
-from sklearn.preprocessing import StandardScaler
+from sklearn.preprocessing import StandardScaler, FunctionTransformer
 from sklearn.pipeline import Pipeline
 import skops.io as sio
 
@@ -41,9 +41,11 @@ class DataTransformation:
             if not preprocessing_steps:
                 logger.warning("No preprocessing steps enabled - "
                                "returning empty pipeline")
-
+                preprocessing_steps.append(('passthrough',
+                                            FunctionTransformer(func=None,
+                                                                validate=False)))  # noqa E51
             preprocessor = Pipeline(preprocessing_steps)
-
+            logging.debug(preprocessor.steps)
             return preprocessor
 
         except Exception:

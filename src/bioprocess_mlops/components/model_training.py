@@ -33,6 +33,8 @@ class ModelTrainer:
                 self.preprocessing_config.pp_template_path
             )
 
+            logging.debug(preprocessing_obj.steps)
+
             logger.info("Fitting the preprocessing pipeline")
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)  # noqa E51
             sio.dump(preprocessing_obj,

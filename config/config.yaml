@@ -9,7 +9,7 @@ data_paths:
 
 split:
   test_size: 0.2
-  random_state: 123
+  random_state: 33
 
 # Model configurations
 model:
@@ -29,7 +29,7 @@ preprocessing:
     snv:
       enabled: false
     standard_scaler:
-      enabled: true
+      enabled: false
 
   artifact:
     preprocesser_template_path: "artifacts/preprocesser_template.skops"
