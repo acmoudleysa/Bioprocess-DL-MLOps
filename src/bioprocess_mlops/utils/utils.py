@@ -13,6 +13,7 @@ from sklearn.metrics import (
     recall_score
 )
 from typing import Literal
+from sklearn.base import BaseEstimator, TransformerMixin
 
 logger = logging.getLogger(__name__)
 
@@ -102,3 +103,14 @@ class Metrics:
             'r2': r2_score(self.y_true,
                            self.y_pred)
         }
+
+
+class IdentityTransformer(BaseEstimator, TransformerMixin):
+    def fit(self, X, y=None):
+        return self
+
+    def transform(self, X):
+        return X
+
+    def fit_transform(self, X, y=None):
+        return self.fit(X, y).transform(X)

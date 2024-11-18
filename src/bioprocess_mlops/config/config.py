@@ -39,8 +39,8 @@ class MLflowConfig:
 @dataclass
 class PreprocessingConfig:
     steps: Dict[str, Dict[str, Any]]
-    pp_template_path: str
-    pp_fitted_path: str
+    order: list
+    artifacts_path: Dict[str, str]
 
 
 class ConfigurationManager:
@@ -94,10 +94,8 @@ class ConfigurationManager:
         pp_config = self.config['preprocessing']
         return PreprocessingConfig(
             steps=pp_config['methods'],
-            pp_template_path=pp_config['artifact']
-            ['preprocesser_template_path'],
-            pp_fitted_path=pp_config['artifact']
-            ['fitted_preprocessor_path']
+            order=pp_config['order'],
+            artifacts_path=pp_config['artifact']
         )
 
     @property

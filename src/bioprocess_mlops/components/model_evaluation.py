@@ -39,7 +39,8 @@ class ModelEvaluation:
 
             logger.info("Preprocessing test data")
             pp_obj = sio.load(
-                self.preprocessing_config.pp_fitted_path
+                self.preprocessing_config.artifacts_path[
+                    'fitted_preprocessor_path']
             )
             input_feature_test_arr = pp_obj.transform(input_feature_test_df)  # noqa E51
             test_arr = np.c_[input_feature_test_arr,

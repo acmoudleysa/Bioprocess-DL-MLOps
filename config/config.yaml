@@ -31,6 +31,8 @@ preprocessing:
     standard_scaler:
       enabled: false
 
+  order: []
+
   artifact:
     preprocesser_template_path: "artifacts/preprocesser_template.skops"
     fitted_preprocessor_path: "artifacts/preprocesser_fitted.skops"

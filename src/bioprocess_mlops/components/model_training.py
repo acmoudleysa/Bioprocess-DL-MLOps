@@ -30,7 +30,8 @@ class ModelTrainer:
             target_feature_train_df = train_df[target_column]
 
             preprocessing_obj = sio.load(
-                self.preprocessing_config.pp_template_path
+                self.preprocessing_config.artifacts_path[
+                    'preprocesser_template_path']
             )
 
             logging.debug(preprocessing_obj.steps)
@@ -38,7 +39,9 @@ class ModelTrainer:
             logger.info("Fitting the preprocessing pipeline")
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)  # noqa E51
             sio.dump(preprocessing_obj,
-                     self.preprocessing_config.pp_fitted_path)
+                     self.preprocessing_config.artifacts_path[
+                         'fitted_preprocessor_path'
+                         ])
 
             logging.info("Fitted preprocessor is saved!")
             train_arr = np.c_[input_feature_train_arr, target_feature_train_df.to_numpy()]  # noqa E51
