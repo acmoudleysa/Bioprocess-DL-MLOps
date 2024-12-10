@@ -10,3 +10,4 @@
 - [Univariate statistics](https://www.jbstatistics.com/)
 - [How does Pickle work](https://rushter.com/blog/pickle-serialization-internals/)
 - Basics of CNN [Refresher if you have forgotten the concepts](https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1)
+- Upsampling before CV? [You are doing it wrong](https://kiwidamien.github.io/how-to-do-cross-validation-when-upsampling-data.html)
