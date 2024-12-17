@@ -12,3 +12,19 @@
 - Basics of CNN [Refresher if you have forgotten the concepts](https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1)
 - Upsampling before CV? [You are doing it wrong](https://kiwidamien.github.io/how-to-do-cross-validation-when-upsampling-data.html)
 - [Bayesian Optimization](https://www.ritchievink.com/blog/2019/08/25/algorithm-breakdown-bayesian-optimization/)
+- What to do if negative predictions does not make sense to your modeling? [Use this](https://scikit-learn.org/1.5/modules/generated/sklearn.compose.TransformedTargetRegressor.html)
+  ```python
+  # An example:
+  from sklearn.compose import TransformedTargetRegressor
+  from sklearn.linear_model import LinearRegression
+  
+  # Model pipeline with log transform and inverse exp automatically applied
+  model = TransformedTargetRegressor(
+      estimator=LinearRegression(),
+      transformer=np.log,
+      inverse_transform=np.exp
+  )
+  
+  # Train your model with your data
+  model.fit(X_train, y_train)
+  ```
