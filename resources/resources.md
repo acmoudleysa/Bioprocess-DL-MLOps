@@ -28,3 +28,4 @@
   # Train your model with your data
   model.fit(X_train, y_train)
   ```
+- Backpropagation in CNNs [Here](https://deeplearning.cs.cmu.edu/F21/document/recitation/Recitation5/CNN_Backprop_Recitation_5_F21.pdf)
