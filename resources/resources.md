@@ -30,3 +30,4 @@
   ```
 - Backpropagation in CNNs [Here](https://deeplearning.cs.cmu.edu/F21/document/recitation/Recitation5/CNN_Backprop_Recitation_5_F21.pdf)
 - Kernel methods [Here](https://alex.smola.org/papers/2002/SchSmo02b.pdf)
+- [BatchNorm](https://towardsdatascience.com/batch-norm-explained-visually-how-it-works-and-why-neural-networks-need-it-b18919692739)
