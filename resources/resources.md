@@ -34,3 +34,4 @@
 - [Residual Blocks](https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec)
 - [Revision lecture notes](https://cs231n.github.io/convolutional-networks/)
 - [DL using SVM-paper](https://arxiv.org/pdf/1306.0239)
+- [Crazy paper regarding CNN architecture Design](https://arxiv.org/pdf/2003.13678)
