@@ -33,3 +33,4 @@
 - [BatchNorm](https://towardsdatascience.com/batch-norm-explained-visually-how-it-works-and-why-neural-networks-need-it-b18919692739)
 - [Residual Blocks](https://towardsdatascience.com/residual-blocks-building-blocks-of-resnet-fd90ca15d6ec)
 - [Revision lecture notes](https://cs231n.github.io/convolutional-networks/)
+- [DL using SVM-paper](https://arxiv.org/pdf/1306.0239)
