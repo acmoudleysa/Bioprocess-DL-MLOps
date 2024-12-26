@@ -35,3 +35,4 @@
 - [Revision lecture notes](https://cs231n.github.io/convolutional-networks/)
 - [DL using SVM-paper](https://arxiv.org/pdf/1306.0239)
 - [Crazy paper regarding CNN architecture Design](https://arxiv.org/pdf/2003.13678)
+- [Multiblock PLS](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/cem.3618)
