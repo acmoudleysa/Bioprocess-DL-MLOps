@@ -36,3 +36,5 @@
 - [DL using SVM-paper](https://arxiv.org/pdf/1306.0239)
 - [Crazy paper regarding CNN architecture Design](https://arxiv.org/pdf/2003.13678)
 - [Multiblock PLS](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/10.1002/cem.3618)
+- [Loved this video on Pseudo-inverse](https://www.youtube.com/watch?v=DysbzsiBAdg&list=LL&index=6&t=1899s&ab_channel=AdamDhalla)
+- 
