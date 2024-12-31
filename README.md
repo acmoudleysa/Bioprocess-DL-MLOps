@@ -39,3 +39,10 @@ I will have a notebook folder to keep all the notes of the things I have studied
 During development, I use DVC and MLflow to manage and track data and model versions. DVC ensures reproducibility by versioning datasets and models, while MLflow tracks experiments, logs metrics, and manages model versions. Once experiments are complete and models are ready, I push all changes to GitHub.
 
 GitHub Actions then automates the CI/CD process, testing, building, and deploying Docker containers for both Airflow DAGs (handling retraining) and the prediction web app. The containers are hosted to simulate a production environment (You can use Azure container registry. I don't have it so I will check everything locally). For the model storage, Google Drive serves as a free storage solution where Airflow uploads the trained models. This allows the web app to access and load the latest models regularly.
+
+
+## Progress
+CNNs (both classical and modern architecture) :heavy_check_mark:
+RNNs :heavy_check_mark:
+LSTM - In progress
+GPs - In progress
