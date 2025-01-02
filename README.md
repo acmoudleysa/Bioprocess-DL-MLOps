@@ -43,6 +43,9 @@ GitHub Actions then automates the CI/CD process, testing, building, and deployin
 
 ## Progress
 CNNs (both classical and modern architecture) :heavy_check_mark:
+
 Vanilla RNN :heavy_check_mark:
-LSTM, GRU, BERT - :heavy_check_mark:
+
+LSTM, GRU, BiRNN - :heavy_check_mark:
+
 GPs - In progress
