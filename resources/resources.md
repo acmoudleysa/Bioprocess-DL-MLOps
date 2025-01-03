@@ -43,3 +43,4 @@
   - This thing is relevant in RNN BPTT, where we assume that the $W_{HH}$ is diagonalizable (its square obviously). During backprop, $W^kx$ appears which using the power method approximates for $\lim_{k \to \inf}$ to $\lambda ^kc_1v_1$ and if the eigenvalue is greater than 1, the gradient calculation diverges and if less than 1 it vanishes. Hence, there's an issue of vanishing and exploding gradients in RNN. Randomized truncation (concept similar to dropout, where the expected value is equal to the actual value) or time series truncation (however introduces inductive bias) can be used.
 - [Intro to LSTM](https://colah.github.io/posts/2015-08-Understanding-LSTMs/)
 - [Good lecture on kernel methods](https://www.youtube.com/watch?v=XUj5JbQihlU&t=1553s)
+. [Only Vapnik could do better than this (hopefully)](https://www.youtube.com/watch?v=eHsErlPJWUU)
