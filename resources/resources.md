@@ -45,3 +45,4 @@
 - [Good lecture on kernel methods](https://www.youtube.com/watch?v=XUj5JbQihlU&t=1553s)
 . [Only Vapnik could do better than this (hopefully)](https://www.youtube.com/watch?v=eHsErlPJWUU)
 - [Choosing the right K](https://cran.r-project.org/web/packages/cvms/vignettes/picking_the_number_of_folds_for_cross-validation.html)
+- [Practical tips on using SVM](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
