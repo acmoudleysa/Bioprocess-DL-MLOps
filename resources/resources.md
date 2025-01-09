@@ -47,3 +47,4 @@
 - [Choosing the right K](https://cran.r-project.org/web/packages/cvms/vignettes/picking_the_number_of_folds_for_cross-validation.html)
 - [Practical tips on using SVM](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 - [Nice blog on GPs, I recommend after finishing GP section from d2l book](https://yugeten.github.io/posts/2019/09/GP/)
+- [Gaussian Process Classifier using NumPy](https://krasserm.github.io/2020/11/04/gaussian-processes-classification/)
