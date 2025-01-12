@@ -48,3 +48,4 @@
 - [Practical tips on using SVM](https://www.csie.ntu.edu.tw/~cjlin/papers/guide/guide.pdf)
 - [Nice blog on GPs, I recommend after finishing GP section from d2l book](https://yugeten.github.io/posts/2019/09/GP/)
 - [Gaussian Process Classifier using NumPy](https://krasserm.github.io/2020/11/04/gaussian-processes-classification/)
+- [Just a refresher on polar coordinates](https://web.ma.utexas.edu/users/m408m/Display15-4-2.shtml)
