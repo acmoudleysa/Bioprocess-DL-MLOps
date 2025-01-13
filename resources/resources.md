@@ -53,4 +53,4 @@
   - When you apply a transformation matrix 𝐴A to the unit cube (in 3D) or unit square (in 2D), the actual volume (or area) change is given by the absolute value of the determinant of the matrix. Remember The Jacobian determinant represents how much the area (or volume, in higher dimensions) changes when you transform from one coordinate system to another. 
 - [Some matrix calculus](https://en.wikipedia.org/wiki/Matrix_calculus#Layout_conventions)
 - [GP and inversion of kernel matrix](https://stats.stackexchange.com/questions/503058/relationship-between-cholesky-decomposition-and-matrix-inversion)
-  Kernel matrix is positive-semidefinite (which means cholesky is not valid when one of the eigenvalue is zero) but we add some noise(not a problem for noise-added GP but a problem for noise-free GP).
+  Kernel matrix is positive-semidefinite (which means [cholesky](https://zief0002.github.io/matrix-algebra/cholesky-decompostion.html) is not valid when one of the eigenvalue is zero) but we add some noise(not a problem for noise-added GP but a problem for noise-free GP).
