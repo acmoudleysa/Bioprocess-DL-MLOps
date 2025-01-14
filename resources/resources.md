@@ -54,3 +54,4 @@
 - [Some matrix calculus](https://en.wikipedia.org/wiki/Matrix_calculus#Layout_conventions)
 - [GP and inversion of kernel matrix](https://stats.stackexchange.com/questions/503058/relationship-between-cholesky-decomposition-and-matrix-inversion)
   Kernel matrix is positive-semidefinite (which means [cholesky](https://zief0002.github.io/matrix-algebra/cholesky-decompostion.html) is not valid when one of the eigenvalue is zero) but we add some noise(not a problem for noise-added GP but a problem for noise-free GP).
+- [MMD and kernels](https://www.youtube.com/watch?v=zFffYuDGslg)
