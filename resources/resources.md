@@ -67,6 +67,8 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
   - (https://mlu-explain.github.io/double-descent/)
   - (https://arxiv.org/pdf/1812.11118)
   - (http://doursat.free.fr/docs/Geman_Bienenstock_Doursat_1992_bv_NeurComp.pdf)
+  - (https://www.casact.org/sites/default/files/2021-07/Bias-Variance-Tradeoff-Brady-Brockmeier.pdf)
+- [Boosting](https://arxiv.org/pdf/1403.1452)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
