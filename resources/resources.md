@@ -71,6 +71,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
   - (https://www.casact.org/sites/default/files/2021-07/Bias-Variance-Tradeoff-Brady-Brockmeier.pdf)
 - [Boosting](https://arxiv.org/pdf/1403.1452)
 - [InstanceHardnessCV](https://fritshermans.github.io/posts/hard_to_classify_datapoints.html)
+- [PLS-DA class weights and multiclass](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/cem.3030)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
