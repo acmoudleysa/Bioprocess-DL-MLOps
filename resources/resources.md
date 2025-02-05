@@ -72,6 +72,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Boosting](https://arxiv.org/pdf/1403.1452)
 - [InstanceHardnessCV](https://fritshermans.github.io/posts/hard_to_classify_datapoints.html)
 - [PLS-DA class weights and multiclass](https://analyticalsciencejournals.onlinelibrary.wiley.com/doi/abs/10.1002/cem.3030)
+- [Algorithmic details with Linear Algebra in depth. Super compact](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=87b7455b4a1ebd6f354cf23233435f81215f25d1)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
