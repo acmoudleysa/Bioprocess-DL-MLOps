@@ -1,0 +1,19 @@
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.7.0
+  hooks:
+    - id: ruff
+      name: Ruff Linter
+      args: ["--fix"] # Automatically fix issues
+      files: ^(src/|tests/)
+      stages: [pre-commit]
+    - id: ruff-format
+      name: Ruff Formatter
+      files: ^(src/|tests/)
+      stages: [pre-commit]
+
+- repo: https://github.com/astral-sh/uv-pre-commit
+   # uv version.
+  rev: 0.5.29
+  hooks:
+    - id: uv-export

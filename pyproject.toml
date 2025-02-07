@@ -1,0 +1,20 @@
+[project]
+name = "bioprocess-dl-mlops"
+version = "0.1.0"
+description = "ML and DL applied to Bioprocess modeling using MLOps"
+readme = "README.md"
+requires-python = ">=3.11.1"
+dependencies = [
+    "apache-airflow>=2.10.4",
+    "mlflow>=2.20.1",
+    "numpy>=2.2.2",
+    "pandas>=2.2.3",
+    "python-dotenv>=1.0.1",
+    "skops>=0.11.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.4",
+    "ruff>=0.9.5",
+]

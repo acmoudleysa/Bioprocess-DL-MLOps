@@ -25,20 +25,18 @@ list_of_files = [
     f"src/{project_name}/utils/__init__.py",
     "tests/unit/__init__.py",
     "tests/integration/__init__.py",
-    "requirements.txt",
     "start.sh",
-    "requirements_dev.txt",
     ".env",
-    "setup.cfg",
     "pyproject.toml",
     "Dockerfile.airflow",
-    "tox.ini",
     "experiment/experiments.ipynb",
     "dvc.yaml",
     "params.yaml",
     "docker-compose.yaml",
+    "pyproject.toml",
     "docker.ignore",
-    ".flake8"
+    "ruff.toml",
+    ".pre-commit-config.yaml"
 ]
 
 for filepath_str in list_of_files:

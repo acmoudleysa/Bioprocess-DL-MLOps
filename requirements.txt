@@ -1,9 +1,0 @@
-python-dotenv
-apache-airflow
-pandas
-numpy
-mlflow
-flake8
-skops
-
--e .
