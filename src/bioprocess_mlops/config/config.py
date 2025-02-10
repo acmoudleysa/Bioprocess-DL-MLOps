@@ -69,7 +69,8 @@ class ConfigurationManager:
             experiment_name=mlflow_config["experiment_name"],
             run_name=mlflow_config["run_name"],
             active_status=mlflow_config["active"],
-            uri=self.secrets_path['mlflow_uri'] if self.secrets_path is not None else None
+            uri=self.secrets_path['mlflow_uri'] if self.secrets_path
+            is not None else None
         )
 
     @property

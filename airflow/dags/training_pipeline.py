@@ -57,14 +57,16 @@ with DAG(
 
     data_ingestion = PythonOperator(
         task_id="data_ingestion",
-        python_callable=create_pipeline_step(TrainingPipeline.start_data_ingestion),
+        python_callable=create_pipeline_step(TrainingPipeline
+                                             .start_data_ingestion),
         provide_context=True,
         dag=dag
     )
 
     data_preprocessing = PythonOperator(
         task_id="data_preprocessing",
-        python_callable=create_pipeline_step(TrainingPipeline.start_data_transformation),
+        python_callable=create_pipeline_step(TrainingPipeline
+                                             .start_data_transformation),
         provide_context=True,
         dag=dag
     )
@@ -80,7 +82,8 @@ with DAG(
 
     model_evaluation = PythonOperator(
         task_id='model_evaluation',
-        python_callable=create_pipeline_step(TrainingPipeline.start_model_evaluation),
+        python_callable=create_pipeline_step(TrainingPipeline
+                                             .start_model_evaluation),
         provide_context=True,
         dag=dag
     )
@@ -91,4 +94,5 @@ with DAG(
     )
 
 
-start >> data_ingestion >> data_preprocessing >> model_training >> model_evaluation >> end
+(start >> data_ingestion >> data_preprocessing >> model_training
+ >> model_evaluation >> end)
