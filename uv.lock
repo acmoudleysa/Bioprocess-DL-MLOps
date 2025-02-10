@@ -399,7 +399,7 @@ wheels = [
 [[package]]
 name = "bioprocess-dl-mlops"
 version = "0.1.0"
-source = { virtual = "." }
+source = { editable = "." }
 dependencies = [
     { name = "apache-airflow" },
     { name = "mlflow" },
