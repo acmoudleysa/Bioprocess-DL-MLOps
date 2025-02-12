@@ -77,6 +77,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Calibration transfer in chemometrics](https://www.sciencedirect.com/science/article/pii/S0165993621001540#:~:text=Calibration%20transfer%20(CT)%20refers%20to,infrared)%20calibration%20models%20between%20spectrometers.)
 - [Cracked paper and also a cracked author](https://arxiv.org/pdf/2006.00089v1)
 - [Leverage from Hat matrix](https://mandymejia.com/explicit-derivation-of-leverage-in-slr/)
+- [Unsupervised Calibration Transfer DOP, uDOP, PDS and Domain-invariant PLS](https://www.sciencedirect.com/science/article/pii/S0003267022007255#bib30)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
