@@ -75,6 +75,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Algorithmic details with Linear Algebra in depth. Super compact](https://citeseerx.ist.psu.edu/document?repid=rep1&type=pdf&doi=87b7455b4a1ebd6f354cf23233435f81215f25d1)
 - [Notes on Rayleigh quotient](https://www.sjsu.edu/faculty/guangliang.chen/Math250/lec4RQ.pdf)
 - [Calibration transfer in chemometrics](https://www.sciencedirect.com/science/article/pii/S0165993621001540#:~:text=Calibration%20transfer%20(CT)%20refers%20to,infrared)%20calibration%20models%20between%20spectrometers.)
+- [Cracked paper and also a cracked author](https://arxiv.org/pdf/2006.00089v1)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
