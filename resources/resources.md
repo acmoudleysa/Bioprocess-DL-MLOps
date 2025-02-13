@@ -78,6 +78,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Cracked paper and also a cracked author](https://arxiv.org/pdf/2006.00089v1)
 - [Leverage from Hat matrix](https://mandymejia.com/explicit-derivation-of-leverage-in-slr/)
 - [Unsupervised Calibration Transfer DOP, uDOP, PDS and Domain-invariant PLS](https://www.sciencedirect.com/science/article/pii/S0003267022007255#bib30)
+- [Domain-Invariant PLSR](https://pubs.acs.org/doi/10.1021/acs.analchem.8b00498)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
