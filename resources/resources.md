@@ -79,6 +79,9 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Leverage from Hat matrix](https://mandymejia.com/explicit-derivation-of-leverage-in-slr/)
 - [Unsupervised Calibration Transfer DOP, uDOP, PDS and Domain-invariant PLS](https://www.sciencedirect.com/science/article/pii/S0003267022007255#bib30)
 - [Domain-Invariant PLSR](https://pubs.acs.org/doi/10.1021/acs.analchem.8b00498)
+- On SVD:
+  - [Here](https://www-users.cselabs.umn.edu/Fall-2019/csci5304/FILES/LecN9.pdf)
+  - [Here](https://pillowlab.princeton.edu/teaching/mathtools21fall/notes/notes_SVD.pdf)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
