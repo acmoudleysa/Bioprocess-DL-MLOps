@@ -82,6 +82,8 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - On SVD:
   - [Here](https://www-users.cselabs.umn.edu/Fall-2019/csci5304/FILES/LecN9.pdf)
   - [Here](https://pillowlab.princeton.edu/teaching/mathtools21fall/notes/notes_SVD.pdf)
+- [On Randomized methods](https://www.youtube.com/watch?v=mQlzdDTRJpU)
+- [Lanczos algorithm to derive eigenvalues](https://en.wikipedia.org/wiki/Lanczos_algorithm)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
