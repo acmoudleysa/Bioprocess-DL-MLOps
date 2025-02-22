@@ -58,6 +58,7 @@
 - [MMD and kernels](https://www.youtube.com/watch?v=zFffYuDGslg)
 - [Entire book on GP](https://gaussianprocess.org/gpml/chapters/RW.pdf): Make sure you have skimmed through chapter 6 of PRML before leaping into this new venture
 - [Linear Algebra primer](https://pabloinsente.github.io/intro-linear-algebra#vector-null-space)
+- [Cheatsheet](https://atmos.uw.edu/~hakim/591/LA_primer.pdf)
 - PCA (on A.T  !!!) vs Gram-Schimdt (on A !!!) (or let's say QR decomposition): If your goal is to find the set of orthonormal basis vectors, all of them will work for you. Well, although they might be different because there are infintely many but they will do the job (i.e. spanning the column space of a matrix, let's say A). But PCA comes with a overhead of finding the set of orthonormal basis vectors in the order of decreasing magnitude of projected vector onto that vector (a.k.a less variance explained as we proceed further), so it's a slower compared to G-S (or QR). You might also find some similarities between how PCA and G-S works (I am talking about the NIPALS here and yeah, it's the deflation step). So PCA (original on A) basis vectors of the row space whereas for the GS and QR its the basis vectors of the column space.
 - [Model Evaluation, Model Selection, and Algorithm
 Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv.org/pdf/1811.12808)
