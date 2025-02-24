@@ -86,6 +86,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [On Randomized methods](https://www.youtube.com/watch?v=mQlzdDTRJpU)
 - [Eigenvalues and Eigenvectors computation](https://sci-hub.se/https://doi.org/10.1137/0106027)
 - [Lanczos algorithm to derive eigenvalues](https://en.wikipedia.org/wiki/Lanczos_algorithm)
+- [Deflation techniques](https://web.stanford.edu/~lmackey/papers/deflation-nips08.pdf)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
