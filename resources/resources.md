@@ -87,6 +87,7 @@ Selection in Machine Learning: Paper by our own Sebastian Raschka](https://arxiv
 - [Eigenvalues and Eigenvectors computation](https://sci-hub.se/https://doi.org/10.1137/0106027)
 - [Lanczos algorithm to derive eigenvalues](https://en.wikipedia.org/wiki/Lanczos_algorithm)
 - [Deflation techniques](https://web.stanford.edu/~lmackey/papers/deflation-nips08.pdf)
+- [Sparse PCA](https://bio.libretexts.org/Bookshelves/Computational_Biology/Book%3A_Computational_Biology_-_Genomes_Networks_and_Evolution_(Kellis_et_al.)/20%3A_Networks_I-_Inference_Structure_Spectral_Methods/20.04%3A_Sparse_Principal_Component_Analysis)
 ----------
 ### Explanation of True Risk, Empirical Risk, Estimation Error, and Approximation Error
 
